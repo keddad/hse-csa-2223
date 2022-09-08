@@ -1,3 +1,4 @@
 main
 main_unoptimized
+main_asm
 *.A
