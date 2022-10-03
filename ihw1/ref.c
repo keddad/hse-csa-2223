@@ -68,8 +68,8 @@ int main(int argv, char *argc[]) {
       return 1;
     }
 
-    FILE *in_file = fopen(argc[4], "r");
-    output = fopen(argc[5], "w");
+    FILE *in_file = fopen(argc[3], "r");
+    output = fopen(argc[4], "w");
     read_arr(input_size, arr, in_file);
 
     fclose(in_file);

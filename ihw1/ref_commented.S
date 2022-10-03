@@ -292,14 +292,14 @@ main:
 	jmp	.L18
 .L24:
 	mov	rax, QWORD PTR [rbp-96]
-	add	rax, 32
+	add	rax, 24
 	mov	rax, QWORD PTR [rax]
 	mov	esi, OFFSET FLAT:.LC4
 	mov	rdi, rax
 	call	fopen # in_file
 	mov	QWORD PTR [rbp-48], rax
 	mov	rax, QWORD PTR [rbp-96]
-	add	rax, 40
+	add	rax, 32
 	mov	rax, QWORD PTR [rax]
 	mov	esi, OFFSET FLAT:.LC5
 	mov	rdi, rax

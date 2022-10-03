@@ -15,4 +15,7 @@ ref_commented.o: ref_commented.S
 ref_commented: ref_commented.o
 	gcc ref_commented.o -o ref_commented
 
+test: ref ref_commented
+	python test_asm.py
+
 all: ref ref_commented
