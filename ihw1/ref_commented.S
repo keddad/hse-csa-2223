@@ -17,9 +17,9 @@ read_arr:
 	push	rbp
 	mov	rbp, rsp
 	sub	rsp, 48 # Выделяем место на стеке под переменные
-	mov	DWORD PTR [rbp-20], edi
-	mov	QWORD PTR [rbp-32], rsi
-	mov	QWORD PTR [rbp-40], rdx # Сохраняем в них аргументы
+	mov	DWORD PTR [rbp-20], edi  # size
+	mov	QWORD PTR [rbp-32], rsi # *Arr
+	mov	QWORD PTR [rbp-40], rdx # FILE*
 	mov	DWORD PTR [rbp-4], 0 # i
 	jmp	.L2
 .L3:
@@ -53,9 +53,9 @@ write_arr:
 	push	rbp
 	mov	rbp, rsp
 	sub	rsp, 48
-	mov	DWORD PTR [rbp-20], edi
-	mov	QWORD PTR [rbp-32], rsi
-	mov	QWORD PTR [rbp-40], rdx
+	mov	DWORD PTR [rbp-20], edi # size
+	mov	QWORD PTR [rbp-32], rsi # *arr
+	mov	QWORD PTR [rbp-40], rdx # FILE*
 	mov	DWORD PTR [rbp-4], 0 # Положили переменные на стек
 	jmp	.L5
 .L6:
@@ -90,8 +90,8 @@ generate_arr:
 	mov	rbp, rsp
 	push	rbx
 	sub	rsp, 40
-	mov	DWORD PTR [rbp-36], edi
-	mov	QWORD PTR [rbp-48], rsi
+	mov	DWORD PTR [rbp-36], edi # size
+	mov	QWORD PTR [rbp-48], rsi # *arr
 	mov	edi, 0
 	call	time
 	mov	edi, eax
@@ -140,9 +140,9 @@ generate_arr:
 process:
 	push	rbp
 	mov	rbp, rsp
-	mov	DWORD PTR [rbp-20], edi
-	mov	QWORD PTR [rbp-32], rsi
-	mov	QWORD PTR [rbp-40], rdx
+	mov	DWORD PTR [rbp-20], edi # size
+	mov	QWORD PTR [rbp-32], rsi # in_arr
+	mov	QWORD PTR [rbp-40], rdx # out_arr
 	mov	DWORD PTR [rbp-4], 0
 	jmp	.L12
 .L15:
