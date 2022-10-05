@@ -1,5 +1,7 @@
 ref
 ref_commented
+ref_regopt
+manyfiles
 *.o
 .pytest_cache
 __pycache__

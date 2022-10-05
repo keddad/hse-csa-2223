@@ -15,7 +15,22 @@ ref_commented.o: ref_commented.S
 ref_commented: ref_commented.o
 	gcc ref_commented.o -o ref_commented
 
-test: ref ref_commented
+ref_regopt.o: ref_regopt.S
+	gcc -c ref_regopt.S -o ref_regopt.o
+
+ref_regopt: ref_regopt.o
+	gcc ref_regopt.o -o ref_regopt
+
+manyfiles_a.o: manyfiles_a.S
+	gcc -c manyfiles_a.S -o manyfiles_a.o
+
+manyfiles_b.o: manyfiles_b.S
+	gcc -c manyfiles_b.S -o manyfiles_b.o
+
+manyfiles: manyfiles_a.o manyfiles_b.o
+	gcc manyfiles_a.o manyfiles_b.o -o manyfiles
+
+test: ref ref_commented ref_regopt manyfiles
 	python test_asm.py
 
-all: ref ref_commented
+all: ref ref_commented ref_regopt manyfiles
