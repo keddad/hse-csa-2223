@@ -4,7 +4,7 @@ import itertools
 from subprocess import run, PIPE, STDOUT
 from pathlib import Path
 
-binaries = ["ref", "ref_commented", "ref_regopt", "manyfiles"]
+binaries = ["ref", "ref_commented", "ref_regopt", "manyfiles", "ref_size", "ref_speed"]
 
 tests = [((1, 2, 3), (2, 2, 2)),
          ((-1, -2, -3), (4, 3, 2)),
