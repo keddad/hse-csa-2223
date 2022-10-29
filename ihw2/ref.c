@@ -4,7 +4,7 @@
 #include <string.h>
 #include <time.h>
 
-const int SPEEDTEST_N = 100000;
+const int SPEEDTEST_N = 1000000;
 const int MAX_STRING_SIZE = 1024 * 1024;
 const int ALPHABET_SIZE = 127;
 
