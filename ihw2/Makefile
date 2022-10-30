@@ -18,10 +18,10 @@ ref.S: ref.c
 manyfiles: manyfiles_a.o manyfiles_b.o
 	gcc manyfiles_a.o manyfiles_b.o -o manyfiles
 
-test: ref ref_commented
+test: ref ref_commented ref_regopt
 	python test_asm.py
 
-bench: ref ref_commented
+bench: ref ref_commented ref_regopt
 	python bench.py
 
-all: ref ref_commented
+all: ref ref_commented ref_regopt

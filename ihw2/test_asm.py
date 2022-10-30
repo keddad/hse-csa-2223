@@ -4,7 +4,7 @@ import itertools
 from subprocess import run, PIPE, STDOUT
 from pathlib import Path
 
-binaries = ["ref", "ref_commented"]
+binaries = ["ref", "ref_commented", "ref_regopt"]
 
 tests = [("abc\ncde\n", "ab\nde"),
          ("aaa\naaa", ""),
