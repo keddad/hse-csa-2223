@@ -7,7 +7,7 @@ from pathlib import Path
 def f(x):
     return 1 / (1 - x)
 
-binaries = ["ref", "ref_commented"]
+binaries = ["ref", "ref_commented", "regopt"]
 
 tests = [(x, f(x)) for x in [-0.5, -0.4, -0.3, -0.001, 0.0004, 0.5]]
 

@@ -14,8 +14,8 @@ ref.S: ref.c
 
 all: ref
 
-test: ref ref_commented
+test: ref ref_commented ref_regopt
 	python test_asm.py
 
-bench: ref ref_commented
+bench: ref ref_commented ref_regopt
 	python bench.py
