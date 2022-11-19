@@ -12,10 +12,13 @@
 ref.S: ref.c
 	gcc -S -O0 -masm=intel -lm -fno-asynchronous-unwind-tables -fcf-protection=none ref.c -o ref.S
 
-all: ref
+manyfiles: manyfiles_a.o manyfiles_b.o
+	gcc manyfiles_a.o manyfiles_b.o -o manyfiles
 
-test: ref ref_commented ref_regopt
+all: ref ref_commented ref_regopt manyfiles
+
+test: ref ref_commented ref_regopt manyfiles
 	python test_asm.py
 
-bench: ref ref_commented ref_regopt
+bench: ref ref_commented ref_regopt manyfiles
 	python bench.py
