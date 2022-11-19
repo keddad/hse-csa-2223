@@ -1,6 +1,8 @@
 ref
 ref_commented
 ref_regopt
+ref_size
+ref_speed
 manyfiles
 *.o
 .pytest_cache

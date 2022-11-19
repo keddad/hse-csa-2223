@@ -1,5 +1,11 @@
 .PHONY: all test
 
+ref_speed: ref.c
+	gcc -O3 ref.c -o ref_speed
+
+ref_size: ref.c
+	gcc -Os ref.c -o ref_size
+
 %.o: %.S
 	gcc -c -lm $< -o $@
 
@@ -15,10 +21,10 @@ ref.S: ref.c
 manyfiles: manyfiles_a.o manyfiles_b.o
 	gcc manyfiles_a.o manyfiles_b.o -o manyfiles
 
-all: ref ref_commented ref_regopt manyfiles
+all: ref ref_commented ref_regopt manyfiles ref_speed ref_size
 
-test: ref ref_commented ref_regopt manyfiles
+test: ref ref_commented ref_regopt manyfiles ref_speed ref_size
 	python test_asm.py
 
-bench: ref ref_commented ref_regopt manyfiles
+bench: ref ref_commented ref_regopt manyfiles ref_speed ref_size
 	python bench.py
