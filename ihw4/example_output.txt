@@ -1,0 +1,30 @@
+Bear is alive
+Bear is sleeping
+Bee is alive! Target pot size: 8
+Bee is alive! Target pot size: 8
+Bee is alive! Target pot size: 8
+Bee is alive! Target pot size: 8
+Bee got more mead. Curretnly at 1
+Bee got more mead. Curretnly at 2
+Bee got more mead. Curretnly at 3
+Bee got more mead. Curretnly at 4
+Bee got more mead. Curretnly at 5
+Bee got more mead. Curretnly at 6
+Bee got more mead. Curretnly at 7
+Bee got more mead. Curretnly at 8
+Full of mead. Call the bear.
+Bear ate all the mead.
+Bear is sleeping
+Bee got more mead. Curretnly at 1
+Bee got more mead. Curretnly at 2
+Bee got more mead. Curretnly at 3
+Bee got more mead. Curretnly at 4
+Bee got more mead. Curretnly at 5
+Bee got more mead. Curretnly at 6
+Bee got more mead. Curretnly at 7
+Bee got more mead. Curretnly at 8
+Full of mead. Call the bear.
+Bear ate all the mead.
+Bear is sleeping
+Bee got more mead. Curretnly at 1
+Bee got more mead. Curretnly at 2
